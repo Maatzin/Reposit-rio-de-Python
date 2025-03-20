@@ -5,41 +5,40 @@ def exibir_menu() :
     print("3 - Sair")
     print("------------------------------")
     
-def cadastrar_pessoa (cadastro):
+def cadastrar_pessoa (cadastros):
         nome = input("Nome:")
         idade = input("Idade:")
         turma = input ("Turma:")
         curso = input ("Curso:")
         cadastros.append({"Nome": nome, "Idade": idade, "Turma": turma, "Curso": curso})
-    print("Cadastro realizado com sucesso!")
+        print("Cadastro realizado com sucesso!")
         
 def ver_cadastros (cadastros):
-        if not cadastros:
-    print ("nenhum cadastro no sistema.")
+    if not cadastros:
+        print ("nenhum cadastro no sistema.")
     else:
-    print("\n ----- Lista de Cadastro -----")
+        print("\n ----- Lista de Cadastro -----")
             
         for i, pessoa in enumerate (cadastros, 1):
                 
-            print(f"{i}. Nome: {pessoa['Nome']}, Idade:
-{pessoa ['idade']}, Turma: {pessoa['Turma']}, Curso: {pessoa['Curso']"})
+            print(f"{i}. Nome: {pessoa['Nome']}, Idade: {pessoa['idade']}, Turma: {pessoa['Turma']}, Curso: {pessoa['Curso']}") 
     
 def main():
-        cadastroS = [] 
-        while True : 
+    cadastros = [] 
+    while True : 
         exibir_menu()
-        opção = input("Escolha uma opção:")
-        if opcao == "1": 
+        opcao = input("Escolha uma opção:")
+        if opcao== "1": 
             cadastrar_pessoa (cadastros)
         elif opcao == "2": 
             ver_cadastros (cadastros)
                 
         elif opcao == "3":
-            print("obrigado por ultilizar o sistema!")
-            break
+                print("obrigado por ultilizar o sistema!")
+                break
                 
         else: 
-            print("Opção incorreta! Tente Novamente.")
+                print("Opção incorreta! Tente Novamente.")
                 
 if __name__=="__main__":
     main()                     
@@ -47,4 +46,3 @@ if __name__=="__main__":
         
 
             
-
