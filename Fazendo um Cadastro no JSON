@@ -29,4 +29,43 @@ def cadastrar_pessoa (cadastros):
         salvar_cadastros(cadastros)
         print("Cadastro realizado com sucesso!")
 
+def ver_cadastros (cadastros) :
+    if not cadastros:
+        print("\nNenhum cadastro realizado.")
+    else:
+        print ("\n====== LISTA DE CADASTRO======")
+        for i, pessoa in enumerate(cadastros, 1):
+            print (f"{i}"). Nome: {pessoa['Nome']}, Idade:
+{pessoa['Idade']}, Turma: {pessoa['Turma']}, Curso: {pessoa['Curso]}"
+    input ("\nPressione Enter para voltar ao menu...")
+
+def main()
+    cadastro = carregar cadastros()
+    while True:
+        exibir_menu()
+        opcao = input("Escolha uma opção")
+        if opcao == "1":
+            cadastrar_pessoa(cadastros)
+        elif opcao == "2":
+            ver_cadastros(cadastros)
+        elif opcao == "3":
+            print("Obrigado por utilizar o sitema novamente")
+            break
+        else:
+            print("Opção Invalida! Tente Novamente")
+
+if __name__ == "__main__"
+    main()
+
+        
+
+
+
+
+
+
+
+        
+
+
     
